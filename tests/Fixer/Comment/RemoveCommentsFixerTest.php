@@ -26,7 +26,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
  *
  * @extends AbstractFixerTestCase<\PhpCsFixer\Fixer\Comment\RemoveCommentsFixer>
  *
- * @author Your name <your@email.com>
+ * @author m-3thra <305653057+m-3thra@users.noreply.github.com>
  *
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise.
  */
