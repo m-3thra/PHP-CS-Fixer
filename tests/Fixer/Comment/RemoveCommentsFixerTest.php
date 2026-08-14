@@ -58,8 +58,20 @@ final class RemoveCommentsFixerTest extends AbstractFixerTestCase
         ];
 
         yield 'comments with a preceding semicolon are removed' => [
-            "<?php \$piyo = 'piyopiyo'; ",
-            "<?php \$piyo = 'piyopiyo'; /* comment */",
+            "<?php \$hoge = 'hogehoge'; ",
+            "<?php \$hoge = 'hogehoge'; /* comment */",
+        ];
+
+        yield 'standalone comment after a statement is kept' => [
+            <<<'PHP'
+                <?php
+                
+                $hoge = 'hogehoge';
+
+                // comment
+                $fuga = 'fugafuga';
+                
+                PHP,
         ];
     }
 }
