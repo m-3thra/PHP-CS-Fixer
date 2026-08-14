@@ -58,7 +58,7 @@ final class RemoveCommentsFixer extends AbstractFixer
             }
 
             for ($i = $prevTokenIndex + 1; $i < $index; ++$i) {
-                if (false !== strpos($tokens[$i]->getContent(), "\n")) {
+                if (str_contains($tokens[$i]->getContent(), "\n")) {
                     continue 2;
                 }
             }
